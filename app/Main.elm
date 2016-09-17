@@ -17,6 +17,6 @@ main =
     Html.App.program
         { init = ( State.initialModel, State.initialCmd )
         , subscriptions = State.subscriptions
-        , update = State.update
+        , update = \msg model -> ( State.update msg model, Cmd.none )
         , view = View.root
         }
