@@ -46,45 +46,6 @@ end line =
         }
 
 
-vectorBetween : Position -> Position -> Vector
-vectorBetween p1 p2 =
-    let
-        dx =
-            p2.x - p1.x
-
-        dy =
-            p2.y - p1.y
-    in
-        { length = sqrt (dx ^ 2 + dy ^ 2)
-        , angle = atan2 dy dx
-        }
-
-
-addToAngle : Float -> Line -> Line
-addToAngle delta line =
-    let
-        vector =
-            line.vector
-    in
-        { line | vector = { vector | angle = vector.angle + delta } }
-
-
-components : Line -> { dx : Float, dy : Float }
-components line =
-    { dx = cos line.vector.angle
-    , dy = sin line.vector.angle
-    }
-
-
-withLength : Float -> Line -> Line
-withLength length line =
-    let
-        vector =
-            line.vector
-    in
-        { line | vector = { vector | length = length } }
-
-
 boundingBox : List Line -> Rect
 boundingBox lines =
     case lines of
@@ -92,12 +53,12 @@ boundingBox lines =
             { x0 = 0, y0 = 0, x1 = 0, y1 = 0 }
 
         line :: rest ->
-            List.foldl (\a b -> mergeRects (toRect a) b)  (toRect line) rest
+            List.foldl (\a b -> mergeRects (toRect a) b) (toRect line) rest
 
 
 mergeRects : Rect -> Rect -> Rect
 mergeRects a b =
-    { x0 = min a.x0 b.x0, y0 = min a.y0 b.y0, x1 = max a.x1 b.x1, y1 = max a.y1 b.y1}
+    { x0 = min a.x0 b.x0, y0 = min a.y0 b.y0, x1 = max a.x1 b.x1, y1 = max a.y1 b.y1 }
 
 
 toRect : Line -> Rect

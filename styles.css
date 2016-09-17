@@ -1,0 +1,32 @@
+@import 'https://fonts.googleapis.com/css?family=Noto+Serif';
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    display: block;
+}
+
+body {
+    font-family: 'Noto Serif', serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    font-weight: 400;
+}
+
+.logo {
+    font-size: 64px;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 16px 32px;
+}
+
+.logo .completed {
+    font-size: 24px;
+    color: #939393;
+}
