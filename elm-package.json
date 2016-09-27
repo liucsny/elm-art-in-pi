@@ -1,7 +1,7 @@
 {
     "version": "1.0.0",
-    "summary": "helpful summary of your project, less than 80 characters",
-    "repository": "https://github.com/user/project.git",
+    "summary": "Gradually draw π as colourful lines. Experiment to learn Elm.",
+    "repository": "https://github.com/piotrdubiel/elm-art-in-pi.git",
     "license": "BSD3",
     "source-directories": [
         "src"
