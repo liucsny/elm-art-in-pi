@@ -1,6 +1,6 @@
 # Art in π
 
-Gradually draw π as colourful lines. Experiment to learn Elm.
+Gradually draws π as colourful lines. Experiment to learn Elm.
 
 ![Art in π](docs/inprogress.png?raw=true)
 

@@ -1,6 +1,6 @@
 {
     "version": "1.0.0",
-    "summary": "Gradually draw π as colourful lines. Experiment to learn Elm.",
+    "summary": "Gradually draws π as colourful lines. Experiment to learn Elm.",
     "repository": "https://github.com/piotrdubiel/elm-art-in-pi.git",
     "license": "BSD3",
     "source-directories": [
